@@ -1,0 +1,60 @@
+= GA Cyber Lint
+
+This project maintains the container image for common lint jobs in CI/CD across GA Cyber projects.
+
+Current build contains the following linters:
+
+* mypy
+* flake8
+* pylint
+* yamllint
+* dockerlint
+
+.sample lint jobs
+[source, yaml]
+----
+default:
+  image: gacybercenter/image-bakery:latest
+  tags:
+    - docker
+
+stages:
+  - Static Analysis
+  - Test
+  - Build
+
+mypy:
+  stage: Static Analysis
+  script: |
+    pwd
+    ls -l
+    python3 -m mypy ./image_baker
+  allow_failure: true
+
+flake8:
+  stage: Static Analysis
+  script: |
+    flake8 --max-line-length=120 ./image_baker
+  allow_failure: true
+
+pylint:
+  stage: Static Analysis
+  script: |
+    pylint -d C0301 ./image_baker
+  allow_failure: true
+
+yamllint:
+  stage: Static Analysis
+  script: |
+    pip3 install yamllint
+    yamlllint -c .yamllint.yml  .
+  allow_failure: true
+
+dockerlint:
+  stage: Static Analysis
+  script: |
+    apt install npm -y
+    npm install -g dockerlint
+    dockerlint .
+  allow_failure: true
+----
