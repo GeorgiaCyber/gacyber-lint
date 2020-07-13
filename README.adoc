@@ -4,13 +4,13 @@ This project maintains the container image for common lint jobs in CI/CD across 
 
 Current build contains the following linters:
 
-* mypy
-* flake8
-* pylint
-* yamllint
-* dockerlint
+* mypy - https://mypy.readthedocs.io/en/stable/[Docs]
+* flake8 - https://flake8.pycqa.org/en/latest/[Docs]
+* pylint - http://pylint.pycqa.org/en/latest/[Docs]
+* yamllint - https://yamllint.readthedocs.io/en/stable/[Docs]
+* dockerlint - https://github.com/redcoolbeans/dockerlint[GitHub, readme]
 
-.sample lint jobs
+.Sample Lint Jobs
 [source, yaml]
 ----
 default:
