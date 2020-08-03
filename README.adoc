@@ -1,3 +1,5 @@
+image::https://img.shields.io/docker/cloud/build/gacybercenter/gacyber-lint[Docker Build]
+
 = GA Cyber Lint
 
 This project maintains the container image for common lint jobs in CI/CD across GA Cyber projects.
