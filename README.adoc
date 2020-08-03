@@ -2,7 +2,7 @@
 --
 image::https://img.shields.io/badge/License-Apache%202.0-blue.svg[Apache 2.0 License, float="left"]
 image::https://img.shields.io/docker/cloud/build/gacybercenter/gacyber-lint[Docker Build, float="left"]
-image::https://img.shields.io/docker/pulls/gacybercenter/image-bakery.svg[Docker Pulls, float="left"]]
+image::https://img.shields.io/docker/pulls/gacybercenter/gacyber-lint.svg[Docker Pulls, float="left"]]
 --
 
 = GA Cyber Lint
